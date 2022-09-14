@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <title>Invoice Table</title>
+    <head>
+        <style>
+            table, th, td{
+        border: 1px solid #138313;
+            }
+           .content{
+            text-align: center;
+            background-color: rgb(95, 197, 211);
+            
+           }
+           h1{
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color:green;
+            color: red;
+           }
+           #total{
+            background-color: orange;
+            font-weight: bold;
+           }
+           #total_values{
+            background-color: rgb(241, 255, 47);
+           }
+        </style>
+    </head>
+    <table style="width:100%;border:none;">
+<thead>
+    <h1>Assorted Fruits</h1>
+    <tr style="background-color: #cc9ef1;">
+    <th>Item Description</th>
+    <th>Qty</th>
+    <th>Unit Price</th>
+    <th>Amount</th>
+    </tr>
+</thead>
+<tbody class="content">
+    <tr>
+        <td>Coconut</td>
+        <td>20 pcs.</td>
+        <td>&#8369;50</td>
+        <td>&#8369;100</td>
+    </tr>
+    <tr>
+        <td>Watermelon</td>
+        <td>10 pcs.</td>
+        <td>&#8369;20</td>
+        <td>&#8369;200</td>
+    </tr>
+    <tr>
+        <td>Apple</td>
+        <td>100 pcs.</td>
+        <td>&#8369;20</td>
+        <td>&#8369;2000</td>
+    </tr>
+    <tr>
+        <td>Jackfruit</td>
+        <td>10 pcs.</td>
+        <td>&#8369;50</td>
+        <td>&#8369;500</td>
+    </tr>
+    <tr>
+        <td>Lemon</td>
+        <td> 10pcs.</td>
+        <td>&#8369;20</td>
+        <td>&#8369;200</td>
+    </tr>
+    
+    <tr>
+        <td id="total" style=text-align:right; colspan="3">Sub-total</td>
+        <td id="total_values">&#8369;3000</td>
+    </tr>
+    <tr>
+        <td id="total" style=text-align:right; colspan="3">VAT(12%)</td>
+        <td id="total_values">&#8369;360</td>
+    </tr>
+    <tr>
+        <td id="total" style=text-align:right;  colspan="3">Total</td>
+        <td id="total_values">&#8369;3360</td>
+    </tr>
+    </div>
+</tbody>
+</table>
+</html>
