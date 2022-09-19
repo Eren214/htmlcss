@@ -1,0 +1,305 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color: #ccc;
+    margin: 0px auto 30px auto;
+    padding: 0px 15px 15px 30px;
+}
+
+header {
+    height: 40px;
+    width: 100%;
+    background-color: #aaa;
+    position: fixed;
+    left:0px;
+    top: 0px;
+}
+
+.banner{
+    height: 400px;
+    background-image: url('../img/graph.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    padding-top:60px;
+    font-size: 46px;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+
+section.about-me{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 38px;
+    text-align: justify;
+}
+
+section.my-portfolio div{
+    background-color: #999;
+    border: 1px solid #000;
+}
+
+.d-none{
+    display: none;
+}
+/*--------inline---------*/
+.d-inline{
+    display: inline;
+    background-color: aqua;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-inline.d2{
+    width: 300px;
+    display: inline-block;
+    background-color: red;
+}
+
+.d-none, .d-inline {
+    font-size: 16px;
+}
+
+section .d-inline{
+    color: yellow;
+}
+
+section>.d-inline{
+    color: green;
+}
+
+section>div>.d-inline{
+    color: violet;
+}
+
+.with-direction{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.with-direction>div{
+    height: 40px;
+    text-align: center;
+}
+
+.d12{
+    order: 5;
+    flex-grow: 1;
+}
+
+.d13{
+    order: 1;
+    flex-grow: 1;
+}
+
+.d14{
+    order:2;
+    flex-grow: 2;
+}
+
+.d15{
+    order: 4;
+    flex-grow: 1;
+}
+
+.d16{
+    order: 3;
+    flex-grow: 3;
+}
+
+section.my-portfolio div.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: none;
+    border: none;
+    padding: 15px;
+}
+
+.d-flex>.d-inline{
+    display: inline-block;
+    width: 180px;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 5px 10px #ccc;
+    border-radius: 4px;
+}
+
+section.my-portfolio .d-flex h4{
+    min-height: 60px;
+}
+
+section.my-portfolio .d-flex p{
+    font-size: 14px;
+}
+#grid-layout h2{
+    color: #000;
+}
+.basic-grid,
+.advance-grid{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    background-color: rgb(235, 45, 235);
+    gap: 20px;
+    padding: 10px;
+}
+.advance-grid{
+    grid-template-columns: auto auto auto auto auto ; 
+}
+.basic-grid>div,
+.advance-grid>div{
+    border: 1px solid rgb(204, 255, 244);
+    padding: 15px;
+    text-align: center;
+    line-height: 52px;
+    background-color: #ffffffcc;
+    box-shadow: 5px 5px sandybrown;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item6{
+    grid-column: 2 / 4;
+}
+.item5{
+    grid-row: 2 / 4;
+}
+.advance-grid .item7{
+    grid-area: 1 / 3/  3 / 5;
+    /*grid-area: column start/row start/column end/row end*/
+}
+.advance-grid .item5{
+    grid-area: 3 / 3 / 5 / 5;
+}
+.advance-grid .item10{
+    grid-column: 1 / 3;
+
+}
+.advance-grid .item2{
+    grid-row: 1 / 3;
+}
+/*--------Grid Column Row-------*/
+.grid-colrow,.grid-arena{
+    display: grid;
+    background-color: rgb(235, 45, 235);
+    gap: 5px;
+    padding: 5px;
+}
+.grid-colrow>div{
+    border: 1px solid rgb(204, 255, 244);
+    padding: 15px;
+    text-align: center;
+    line-height: 65px;
+    background-color: #ffffffcc;
+}
+.grid-arena>div{
+    border: 1px solid rgb(204, 255, 244);
+    padding: 15px;
+    text-align: center;
+    line-height: 65px;
+    background-color: #ffffffcc;
+}
+.grid-colrow{
+    grid-template-columns: auto auto auto auto;
+}
+.grid-arena{
+    grid-template-columns: auto auto auto auto auto auto ;
+}
+    
+.grid-colrow .item1{
+    grid-area: 1/1/3/1;
+}
+.grid-colrow .item3{
+    grid-column: 3/5;
+}
+.grid-colrow .item4{
+  grid-area: 3/2/2/3;
+}
+.grid-colrow .item5{
+    grid-row: 2;
+}
+.grid-colrow .item6{
+    grid-area: 2/4/3/5;
+}
+.grid-colrow .item7{
+    grid-area: 3/2/3/2 ;
+}
+.grid-colrow .item8{
+    grid-area: 3/3/3/3;
+    grid-column: 3/ span 2;
+}
+.grid-colrow .item9{
+    grid-area: 4/2/4/2;
+}
+.grid-colrow .item12{
+    grid-area: 4/4/4/4;
+}
+.grid-colrow .item11{
+    grid-area: 4/3/4/3;
+}
+.grid-colrow .item10{
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+/*---------Grid Area------*/
+ /*grid-area: row start/column start/row end/column end*/
+.grid-arena .item1{
+    grid-column: 1;
+}
+.grid-arena .item2{
+    grid-column: 2;
+}
+.grid-arena .item5{
+    grid-area: 1/5/1/5;
+    grid-column: 5/ span 2;
+    background-color: lawngreen;
+}
+.grid-arena .item6{
+    grid-area: 2/1/2/1;
+}
+.grid-arena .item7{
+    grid-area: 2/6/2/6;
+}
+.grid-arena .item10{
+    grid-area: 3/1/3/1;
+}
+.grid-arena .item12{
+    grid-area: 4/1/4/1;
+}
+.grid-arena .item11{
+    grid-area: 3/6/3/6;
+}
+.grid-arena .item8{
+    grid-area: 2/2/5/4;
+    background-color: aquamarine;
+}
+.grid-arena .item14{
+    grid-area: 5/1/5/1 ;
+}
+.grid-arena .item9{
+    grid-area: 2/4/5/6;
+    background-color: cyan;
+}
+
+
+
