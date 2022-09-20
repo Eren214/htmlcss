@@ -11,14 +11,53 @@ body{
 }
 
 header {
-    height: 40px;
+    height: 50px;
     width: 100%;
-    background-color: #aaa;
+    background-color: #333;
     position: fixed;
     left:0px;
     top: 0px;
 }
-
+nav ul{
+    list-style: none;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 50px;
+    font-weight: 600;
+}
+nav ul li:hover a{
+    color: yellow;
+}
+nav ul li:hover{
+    background-color: forestgreen;
+    color: yellow;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+@media screen and (max-width: 992px) {
+    header{
+        height: auto;
+        position: absolute;
+        background-color: #646161cc;
+    }
+    .banner{
+        margin-top: 280px;
+    }
+    nav ul li{
+        display: block;
+    }  
+}
+@media screen and (max-width: 768px){
+    .banner{
+        background-image: none;
+        background-color: #333;
+    }
+}
 .banner{
     height: 400px;
     background-image: url('../img/graph.jpg');
@@ -28,7 +67,6 @@ header {
 
 h1{
     color:white;
-    text-align: center;
     padding-top:60px;
     font-size: 46px;
 }
