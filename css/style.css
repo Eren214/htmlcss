@@ -1,13 +1,14 @@
 body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #afc4cf2c;
 }
 
 .page-wrapper {
     max-width: 1024px;
     background-color: #ccc;
     margin: 0px auto 30px auto;
-    padding: 0px 15px 15px 30px;
+    padding: 0px 15px 15px 15px;
 }
 
 header {
@@ -43,7 +44,7 @@ nav ul li{
     header{
         height: auto;
         position: absolute;
-        background-color: #646161cc;
+        background-color: #999191cc;
     }
     .banner{
         margin-top: 280px;
@@ -52,14 +53,14 @@ nav ul li{
         display: block;
     }  
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 700px){
     .banner{
         background-image: none;
-        background-color: #333;
+        background-color: rgb(85, 84, 84);
     }
 }
 .banner{
-    height: 400px;
+    height: 480px;
     background-image: url('../img/graph.jpg');
     background-size: cover;
     background-position: bottom;
@@ -69,6 +70,7 @@ h1{
     color:white;
     padding-top:60px;
     font-size: 46px;
+    text-align: center;
 }
 
 h2{
