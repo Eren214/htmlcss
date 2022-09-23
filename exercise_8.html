@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Exercise</title>
+        <meta name="viewport">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js" type="javascript"></script>
+        <style>
+            .table-striped>tbody>tr:nth-of-type(odd)>*{
+                background-color:#ccc;
+            }
+            .table-striped>tbody>tr:nth-of-type(even)>*{
+                background-color: #fff;
+            }
+            .rounded-circle>image{
+                position: relative;
+                padding: -40px;
+            }
+            .rounded-circle>p{
+                right: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="text-muted">Text Muted</p>
+        <p class="text-primary">Text Muted</p>
+        <p class="text-success">Text Muted</p>
+        <p class="text-info">Text Info</p>
+        <p class="text-warning">Text Warning</p>
+        <p class="text-danger">Text Danger</p>
+        <p class="text-secondary">Text Secondary</p>
+        <p class="text-white">Text White</p>
+        <p class="text-dark">Text Dark</p>
+        <p class="text-body">Text Body</p>
+        <p class="text-light">Text Light</p>
+
+        <table class="table table-striped table-borderless table-hover ">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mouse</td>
+                    <td>2</td>
+                    <td>250</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Keyboard</td>
+                    <td>1</td>
+                    <td>300</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Monitor</td>
+                    <td>2</td>
+                    <td>2500</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Headset</td>
+                    <td>1</td>
+                    <td>150</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>    
+        <table class="table table-striped table-bordered table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>2</td>
+                        <td>250</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard</td>
+                        <td>1</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Monitor</td>
+                        <td>2</td>
+                        <td>2500</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+        </table>
+        <table class="table table-striped table-borderless table-hover ">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mouse</td>
+                    <td>2</td>
+                    <td>250</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Keyboard</td>
+                    <td>1</td>
+                    <td>300</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Monitor</td>
+                    <td>2</td>
+                    <td>2500</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Headset</td>
+                    <td>1</td>
+                    <td>150</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>    
+        <table class="table table-striped table-bordered table-hover table-sm">
+            <thead>
+                <tr class="table-primary">
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <td>Mouse</td>
+                        <td>2</td>
+                        <td>250</td>
+                        <td>500</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>Keyboard</td>
+                        <td>1</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>Monitor</td>
+                        <td>2</td>
+                        <td>2500</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+        </table>
+        <div class="table-responsive-sm">
+        <table class="table table-striped table-bordered table-hover ">
+            <thead>
+                <tr class="table-primary">
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                    <th>Subtotal</th>
+                    <th>Vat</th>
+                    <th>Side</th>
+                    <th>Bottom</th>
+                    <th>Top</th>
+                    <th>Back</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <td>Mouse</td>
+                        <td>2</td>
+                        <td>250</td>
+                        <td>500</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>Keyboard</td>
+                        <td>1</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>Monitor</td>
+                        <td>2</td>
+                        <td>2500</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Headset</td>
+                        <td>1</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+<img src="img/Jellyfish.jpg" class="rounded" width="300;">
+<img src="img/Jellyfish.jpg" class="rounded-circle" width="300;" height="auto;">
+<img src="img/Jellyfish.jpg" class="img-thumbnail" width="300;">
+<div style="height: 200px; width:200px; overflow: hidden;" class="rounded-circle"></div>
+<img src="img/Jellyfish.jpg" class="rounded-circle" width="300;" height="300;">
+<div>
+    <img src="img/Jellyfish.jpg" class="rounded float-end" width="300;">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.
+    </p>
+</div>
+    <div>
+    <img src="img/Jellyfish.jpg" class="rounded float-start" width="300;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+        Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.
+    </div>
+    <div>
+        <img src="img/Jellyfish.jpg" class="rounded float-start" width="300;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+            Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+            Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+            Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+            Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+            Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+            Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+            Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. Fusce sodales ut est vel porttitor. Phasellus ut nisl id elit viverra mattis.
+            Vivamus tempor commodo justo et commodo. Morbi ut lectus eget nunc interdum egestas.
+        </div>
+    </body>
+</html>
