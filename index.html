@@ -1,139 +1,255 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My First HTML Page</title>
-<style>
-    table, th, td{
-        border: 1px solid #12d654;
-    }
-
-</style>
-
+    <title>Mark Estrella</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <meta name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js" type="javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
-    <div id="main" class="page-wrapper">
-
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-
-        <p title="Sample Sheet">This is an example of a webpage.</p>
-        <a href="https://www.facebook.com" target="_blank"></a> 
-        <img src="img/Penguins.jpg" height="auto" width="500" alt="This is a sample image">
-        <a href="https://www.facebook.com" target="_blank" title="Go to facebook">Facebook</a>
-    </div>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-                <ol>
-                    <li>List item 2.1</li>
-                    <li>List item 2.2</li>
-                    <li>List item 2.3</li>
-                </ol>
-            <li>Item 3</li>
-            <li>Item 4</li>
-        </ul>
-
-        <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-        </ol>
-        <table style="width:800px;border:none;">
-            <thead>
-                <tr>
-                    <th colspan="2">Fruits</th>
-                    <th colspan="2">Vegetables</th>
-                </tr>
-            <tr style="background-color: #f31616;">
-                <th style="width:20%;">Header 1</th>
-                <th style="width:20%;">Header 2</th> 
-                <th style="width:20%;">Header 3</th>
-                <th style="width:20%;">Header 4</th>  
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td rowspan="3" colspan="">Cell 1</td>
-                <td>Cell 2</td>
-                <td>Cell 3</td>
-                <td>Cell 4</td>
-              </tr>
-            <tr>
-                <td>Cell 1</td>
-                <td>Cell 2</td>
-                <td>Cell 3</td>
-            </tr>
-            <tr>
-                <td>Cell 1</td>
-                <td>Cell 2</td>
-                <td>Cell 3</td>
-                
-                
-            </tr>
-         
-            <!--main content -->
-    <section>
-        <form action="https://google.com" target="_blank" method="GET">
-            <div>
-                <fieldset>
-                            <legend>Student Name</legend>
-                    <label>First Name:</label>
-                        <input type="text" name="first name" maxlength="30" required placeholder="First Name"/>
-                        <label>Last Name:</label>
-                        <input type="text" name="last name" required/>
-                        <label>Middle Name:</label>
-                        <input type="text" name="middle_initial" required/>
-                </fieldset>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg nav-light">
+            <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                         <a class="nav-link" href="#">HOME</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TESTIMONIALS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                  </div>
             </div>
-                    <label>Email: </label>
-                    <input type="email" name="email" required/>
-                    <label>Password:</label>
-                    <input type="password" name="password" />
-            <div>
-                    <label>Age:</label>
-                    <input type="number" name="age" required/>
-                    <label>Birthdate:</label>
-                    <input type="date" name="birthdate" required/>
-            </div>
-            <div>
-                    <input type="radio" id="strongly" name="fav_option" value="STRONGLY">
-                    <label for="strongly">Strongly Agree</label>
-                    <input type="radio" id="somewhat" name="fav_option" value="SOMEWHAT">
-                    <label for="somewhat">Somewhat Agree</label>
-                    <input type="radio" id="neither" name="fav_option" value="NEITHER">
-                    <label for="neither">Neither agree nor disagree</label>
-                    <input type="radio" id="somewhat" name="fav_option" value="SOMEWHAT">
-                    <label for="somewhat">Somewhat disagree</label>
-            <div>
-                    <select name="status" style="width: 150px ;">
-                    <option value="S">Single</option>
-                    </select>
-            </div>
-            <div>
-                    <textarea name="remarks" placeholder="Please type any remarks" cols="30" rows="10" maxlength="300"></textarea>
-            </div>
-                    <fieldset>
-                    <legend>Attachment1</legend>
-                    <input type="file" accept=".pdf,.docx"/>
-                    </fieldset>
-                    <fieldset>
-                    <legend>Attachment2</legend>
-                    <input type="file" accept=".pdf,.docx"/>
-                    </fieldset>
-            <div>
-                    <input type="button" value="submit"/>
-                    <input type="submit" value="submit this"/>
-            </div>         
-        </form>   
+        </nav>
     </section>
-                </tbody>
-                </table>
-        <div style="margin-bottom: 100px;">
+    <section id="banner">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h1>Mark Estrella</h1>
+                    <h2>Full-tack Web Developer</h2>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-16 col-sm-6">
+                    <img src="img/profilephoto (2).png" class="img-fluid">
+                </div>
+                </div>
+            </div>
         </div>
+    </section>
+        <section class="about-me">
+            <h3>About Me</h3>
+        <p>I'm a web developer with a focus on the front-end and back-end, but still exploring other technologies and 
+            frameworks that catch my interest! if you're looking for a developer to add to your team, 
+            I'd love to hear from you!
+        </p>
+        </section>
+        
+        <section class="my-portfolio">
+            <h3 style="text-align:center;">My Portfolio</h3>
+        <div class="container" id="content_1">
+            <div class=" row justify-content-evenly g-5">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus.
+                        verbatim proton donales agua twmpo risk achtung sodalws lasdif kdfdsfdf dkskads amdsdsdas 
+                        gfdffg bvnhj llsldsd fgifgfgg gfgfgfg wogfggg ddddddd ffffffffffffffff ddddddddd ddddddddd
+                       
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 ">
+                <div class="card h-100 ">
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. 
+                         
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus.
+                        verbatim proton donales agua twmpo risk achtung sodalws lasdif kdfdsfdf dkskads amdsdsdas 
+                        gfdffg bvnhj llsldsd fgifgfgg gfgfgfg wogfggg ddddddd ffffffffffffffff ddddddddd ddddddddd
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus. 
+                         
+                    </p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"  id="content_2">
+            <div class="row justify-content-evenly g-5">
+                <div class="col-lg-3 col-md-6 pt-5 pb-5 ">
+                <div class="card h-100 w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus.
+                        verbatim proton donales agua twmpo risk achtung sodalws lasdif kdfdsfdf dkskads amdsdsdas 
+                        gfdffg bvnhj llsldsd fgifgfgg gfgfgfg wogfggg ddddddd ffffffffffffffff ddddddddd ddddddddd
+                        verbatim proton donales 
+                        hjhgkjkkkkk jkkkkkkkkkkkkkkkkkk ggggggg                   
+                    </p>
+                </div>
+                </div>
+                </div>
+            <div class="col-lg-3 col-md-6 pt-5 pb-5 ">
+                <div class="card h-100 w-100 ">
+                    <div class="card-body">
+                        <h4 class="card-title">Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales laoreet augue sed tempus. 
+                        Cras mollis auctor turpis eu cursus. Vestibulum purus ligula, pretium eu scelerisque at, tincidunt vitae risus.                    
+                    </p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+           
+    <section class="work_experience">
+        <div class="container pt-5  pb-5" >
+            <h3 style="text-align:center;">Work Experience</h3>
+            <div class="row">
+            <div class="col text-end">
+            <div class="">
+                <h4>Kodego</h4>
+                <div>Full Stack Web Developer(part-time)</div>
+                <div>July 2022-present</div>
+            </div>    
+            </div>
+           <div class="col"></div>
+            </div>
+            <div class="row">
+            <div class="col order-last">
+            <div class="">
+                <h4>Virtualasting</h4>
+                <div>Virtual Assistant</div>
+                <div>July 2022-present</div>
+            </div>
+            </div>
+           <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col text-end">
+            <div class="">
+                <h4>Draka Philippines Inc.</h4>
+                <div>Electrical Technician</div>
+                <div>July 2005-2019</div>
+            </div>
+            </div>
+           <div class="col"></div>
+            </div>
+            <div class="row">
+            <div class="col order-last">
+            <div class="">
+                <h4>Kodego</h4>
+                <div>Full Stack Web Developer</div>
+                <div>July 2022-present</div>
+            </div>
+            </div>
+           <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col text-end">
+            <div class="">
+                <h4>Kodego</h4>
+                <div>Full Stack Web Developer</div>
+                <div>July 2022-present</div>
+            </div>
+            </div>
+           <div class="col"></div>
+            </div>
+            <div class="row">
+            <div class="col order-last ">
+            <div class="">
+                <h4>Kodego</h4>
+                <div>Full Stack Web Developer</div>
+                <div>July 2022-present</div>
+            </div>
+            </div>
+           <div class="col"></div>
+        </div>   
+    </div>
+ </section>
+ <section class="work-education">
+ <h3 class="text-center mb-5 mt-5">Educational Attainment</h3>
+ <div class="row">
+     <div class="col text-end">
+         College
+     </div>
+     <div class="col"></div>
+ </div>
+ <div class="row">
+     <div class="col order-last">
+         High School
+     </div>
+     <div class="col"></div>                    
+ </div>
+ <div class="row">
+     <div class="col text-end">
+         Elementary
+     </div>
+     <div class="col"></div>
+ </div>
+ <div class="row">
+     <div class="col order-last">
+         Kinder
+     </div>
+     <div class="col"></div>                    
+ </div>
+</div>
+</section>    
+
+    <h3>Educational Attainment</h3>
+    <ul>
+        <li>Web Developer Course: Kodego</li>
+        <li>College: Center for Industrial Technology and Enterprise</li>
+        <li>High School: Cabancalan National High School</li>
+        <li>Elementary: Cabancalan Elementary School</li>
+    </ul>
+    </div>
+    </section>
+<footer>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.linkedin.com/in/mark-estrella-195b54213/" target="_blank">Linkedin</a>
+    <a href="https://www.instagram.com/avatarkram214/" target="_blank">Instagram</a>
+</footer>
 </body>
 </html>

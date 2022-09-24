@@ -16,9 +16,28 @@ header {
     width: 100%;
     background-color: #333;
     position: fixed;
-    left:0px;
+    bottom:0px;
     top: 0px;
 }
+.navbar {
+    height: 40px;
+    overflow: hidden;
+    background-color: rgb(102, 136, 180);
+    position: fixed;
+    top: 0;
+    width: 100%; 
+  }
+  .navbar ul li a{
+    color: #fff;
+    font-weight: 600;
+  }
+  .fa-bars{
+    height: 10px;
+    color: #fff;  
+  }
+  .navbar-toggler{
+    
+  }
 nav ul{
     list-style: none;
     margin: 0;
@@ -29,11 +48,11 @@ nav ul li a{
     line-height: 50px;
     font-weight: 600;
 }
-nav ul li:hover a{
+.navbar ul li:hover a{
     color: yellow;
 }
-nav ul li:hover{
-    background-color: forestgreen;
+.navbar ul li:hover{
+    background-color: rgb(226, 149, 118);
     color: yellow;
 }
 nav ul li{
@@ -59,23 +78,35 @@ nav ul li{
         background-color: rgb(85, 84, 84);
     }
 }
-.banner{
-    height: 480px;
-    background-image: url('../img/graph.jpg');
+
+#banner{
+    height: 500px;
+    background-image: url('../img/web-design-ge35e6e593_1280.jpg');
     background-size: cover;
     background-position: bottom;
+    align-items: center !important;
+    
+}
+#banner img{
+ height: 300px;
+ width: 300px;
+ margin-top: 100px;
+    
 }
 
 h1{
     color:white;
-    padding-top:60px;
+    padding-top:170px;
+    margin-left: 100px;
     font-size: 46px;
-    text-align: center;
+    text-align: left;
+    
 }
 
 h2{
     color: #fff;
-    text-align: center;
+    margin-left: 100px;
+    text-align: left;
     font-size: 32px;
 }
 
@@ -89,108 +120,12 @@ section.about-me{
     line-height: 38px;
     text-align: justify;
 }
-
-section.my-portfolio div{
-    background-color: #999;
-    border: 1px solid #000;
+.my-portfolio{
+    background-image: linear-gradient(rgb(184, 184, 189),rgb(152, 152, 236));
+    padding: 5px;
+    height: auto;
 }
-
-.d-none{
-    display: none;
-}
-/*--------inline---------*/
-.d-inline{
-    display: inline;
-    background-color: aqua;
-}
-
-.d-flex{
-    display: flex;
-}
-
-.d-inline.d2{
-    width: 300px;
-    display: inline-block;
-    background-color: red;
-}
-
-.d-none, .d-inline {
-    font-size: 16px;
-}
-
-section .d-inline{
-    color: yellow;
-}
-
-section>.d-inline{
-    color: green;
-}
-
-section>div>.d-inline{
-    color: violet;
-}
-
-.with-direction{
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.with-direction>div{
-    height: 40px;
-    text-align: center;
-}
-
-.d12{
-    order: 5;
-    flex-grow: 1;
-}
-
-.d13{
-    order: 1;
-    flex-grow: 1;
-}
-
-.d14{
-    order:2;
-    flex-grow: 2;
-}
-
-.d15{
-    order: 4;
-    flex-grow: 1;
-}
-
-.d16{
-    order: 3;
-    flex-grow: 3;
-}
-
-section.my-portfolio div.d-flex{
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: none;
-    border: none;
-    padding: 15px;
-}
-
-.d-flex>.d-inline{
-    display: inline-block;
-    width: 180px;
-    padding: 15px;
-    margin: 15px;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 5px 10px #ccc;
-    border-radius: 4px;
-}
-
-section.my-portfolio .d-flex h4{
-    min-height: 60px;
-}
-
-section.my-portfolio .d-flex p{
-    font-size: 14px;
-}
+/*-------------Grid Property-----*/
 #grid-layout h2{
     color: #000;
 }
@@ -340,6 +275,24 @@ section.my-portfolio .d-flex p{
     grid-area: 2/4/5/6;
     background-color: cyan;
 }
-
-
+.work_experience{
+    background-image: url('../img/pexels-pixabay-276223.jpg');
+}
+.work_experience>.container>.row>.col.text-end{
+    border-right: 4px solid green;
+}
+.work_experience>.container>.row>.col.order-last{
+    border-left: 4px solid green;
+}
+.col.text-end::after,.col.order-last::after{
+    content: ' \2022';
+    font-size: 50px;
+    color: green;
+    position: relative;
+    right: -24.5px;
+    bottom: 52px;
+}
+.col.order-last::after{
+    left: -24px;
+}
 
