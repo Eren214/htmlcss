@@ -72,7 +72,7 @@ nav ul li{
         display: block;
     }  
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
     .banner{
         background-image: none;
         background-color: rgb(85, 84, 84);
@@ -111,8 +111,10 @@ h2{
 }
 
 section.about-me{
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    
 }
 
 .about-me p {
@@ -121,7 +123,8 @@ section.about-me{
     text-align: justify;
 }
 .my-portfolio{
-    background-image: linear-gradient(rgb(184, 184, 189),rgb(152, 152, 236));
+    background-image: url(../img/pexels-pixabay-276223.jpg);
+    background-size: cover;
     padding: 5px;
     height: auto;
 }
@@ -276,23 +279,44 @@ section.about-me{
     background-color: cyan;
 }
 .work_experience{
-    background-image: url('../img/pexels-pixabay-276223.jpg');
+  margin-bottom: 20px;
 }
+
 .work_experience>.container>.row>.col.text-end{
-    border-right: 4px solid green;
+    border-right: 4px solid rgb(0, 66, 128);
 }
 .work_experience>.container>.row>.col.order-last{
-    border-left: 4px solid green;
+    border-left: 4px solid rgb(0, 66, 128);
 }
 .col.text-end::after,.col.order-last::after{
-    content: ' \2022';
-    font-size: 50px;
+    content: '\25c6';
+    font-size: 24px;
     color: green;
     position: relative;
-    right: -24.5px;
-    bottom: 52px;
+    right: -24px;
+    top: -32px;
+    
 }
 .col.order-last::after{
     left: -24px;
 }
 
+.work_education>.container>.row>.col.text-end{
+    border-right: 4px solid rgb(0, 66, 128);
+}
+.work_education>.container>.row>.col.order-last{
+    border-left: 4px solid rgb(0, 66, 128);
+}
+.col.text-end::after,.col.order-last::after{
+    content: '\25C6';
+    font-size: 22px;
+    color: rgb(0, 66, 128);
+    position: relative;
+    right: -24px;
+    bottom: 52px;
+}
+.personal_info{
+    background-image: url(../img/pexels-ithalu-dominguez-907485.jpg);
+    background-size: auto;
+    height: auto;
+}
