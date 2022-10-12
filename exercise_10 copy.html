@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoice Form</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js" type="javascript"></script>
+    </head>
+    <body>    
+    <form action="https://google.com" target="_blank" method="GET">
+        <fieldset class="form-control container my-3">
+            <legend class="text-primary" style="padding-left: 5px ;">Invoice Details</legend>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <label for="invoice" class="form-label">Invoice To: </label>
+                <input type="text" class="form-control" id="invoice" placeholder="Enter your full name">
+            </div>
+            <div class="col">
+                <label for="contact" class="form-label">Contact #:</label>
+                <input type="number" class="form-control" id="contact" placeholder="Enter your number" min="0" max="13">
+            </div>
+            </div> 
+            <div class="row">
+            <div class="col">
+            <label for="invoice" class="form-label"> Date</label>
+            <input type="date" class="form-control" id="date" placeholder="">
+            </div>
+            <div style="margin-top: 32px; position: relative;" class="col">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Choose Currency</option>
+                    <option value="php">PHP</option>
+                    <option value="usd">USD</option>
+                    <option value="aud">AUD</option>
+                    <option value="eur">EUR</option>
+                  </select>
+            </div> 
+                  
+        </div>
+        <div class="container table-responsive">
+        <h1 style="text-align:center; color:red;">Proforma Invoice</h1>
+        <table style="border: 1px solid purple;" class="table table-bordered">
+        <thead>
+            <tr style="background-color: #8da0db; text-align: center;">
+                <th>Item Description</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody class="content">
+        <tr>
+            <td><textarea name="item_1" id="item1" cols="30" rows="1.5" maxlength=""></textarea></td>
+            <td><input type="number" name="quantity_1" id="qty1" onkeyup="keyupFunction()">
+            </td>
+            <td><input type="number" name="unit_1" id="unit1"onkeydown="keydownFunction()">
+            </td>
+            <td><input type="number" name="amount_1" id="amount1" readonly></td>
+            
+        </tr>
+        <tr>
+            <td><textarea name="item_2" id="item2" cols="30" rows="1.5" maxlength=""></textarea></td>
+            <td><input type="number" name="quantity_2"></td>
+            <td><input type="number" name="unit_2"></td>
+            <td><input type="number" name="amount_2"></td>
+        </tr>
+        <tr>
+            <td><textarea name="item_3" id="item3" cols="30" rows="1.5" maxlength=""></textarea></td>
+            <td><input type="number" name="quantity_3"></td>
+            <td><input type="number" name="unit_3"></td>
+            <td><input type="number" name="amount_3"></td>
+        </tr>
+        <tr>
+            <td><textarea name="item_4" id="item4" cols="30" rows="1.5" maxlength=""></textarea></td>
+            <td><input type="number" name="quantity_4"></td>
+            <td><input type="number" name="unit_4"></td>
+            <td><input type="number" name="amount_4"></td>
+        </tr>
+        
+        <tr>
+            <td id="total" style=text-align:right; colspan="3">Sub-total</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="total" style=text-align:right; colspan="3">VAT(12%)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="total" style=text-align:right;  colspan="3">Total</td>
+            <td></td>
+        </tr>    
+    </tbody>
+    </table>
+    </table>
+    </div>
+    </fieldset> 
+    <fieldset class="container  form-control my-3 ">
+        <legend class="text-primary">Additional Details</legend>
+        <label>Payment Method</label>
+        <div style="margin-top: 5px; position: relative;" class="col">
+        <select  style="height: 40px; width: 300px;"class="form-select" aria-label="Default select example">
+            <option style="text-align:center ;" selected>---select payment method---</option>
+            <option value="gcash">Gcash</option>
+            <option value="paypal">Paypal</option>
+            <option value="maya">Maya</option>
+            <option value="credit">Credit</option>
+          </select>
+        </div> 
+        <div class="form-check">
+            <div class="form-group">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <label for="myField" class="control-label"></label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="myField" value="normal" />HOME
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="myField" value="high" /> ADDRESS
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div> 
+        <textarea name="comment_box" id="comment" maxlength="500" placeholder="Delivery Address" cols="30" rows="5" required></textarea>
+    </fieldset>
+    <div class="col-12 my-3">
+        <button style=" margin-left: 100px;" class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </div>
+    </div>
+</form>
+
+    <script>
+			function keydownFunction() {
+				document.getElementById("qty1").style.backgroundColor = "blue";
+			}
+
+			function keyupFunction() {
+				document.getElementById("unit1").style.backgroundColor = "green";
+			}
+	</script>
+    </script>
+</body>
+</html>
+       
