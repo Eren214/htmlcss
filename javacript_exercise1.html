@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Conditions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            .letter{
+                padding-top: 20px;
+            }
+           h3{
+            color: blue;
+           }
+        </style>
+    </head>
+    <body>
+            <h3>Odd or Even Checker</h3>
+            <input type="text" id="num" value="" placeholder="Input First Value" maxlength="1"> 
+            <button onclick="doCheck()">Do Check</button>
+            <div id="result"></div>
+            <div class="letter">
+            <h3>Vowel or Consonant Checker</h3>
+            <input type="text" id="letter_category" value="" placeholder="Input First Value">
+            <button onclick="doCheck2()">Do Check</button>
+            <div id="result2"></div>
+            </div>
+        <script>
+            function doCheck(){
+                let value=(document.getElementById('num').value);
+                if(value%2==0){
+                document.getElementById('result').innerHTML="Value is even number";
+                }else{
+                    document.getElementById('result').innerHTML="Value is odd number";
+                }
+            }
+           function doCheck2(){
+               let value=parseInt(document.getElementById('letter_category').value);
+                if(value=='a'||value=='e'||value=='i'||value=='o'||value=='u'||
+                value=='A'||value=='E'||value=='I'||value=='O'||value=='U'){
+                   document.getElementById('result2').innerHTML="Value is vowel";
+                  }else{
+                   document.getElementById('result2').innerHTML="Value is consonant";
+               }
+           }          
+        </script>
+    </body>
+</html>
