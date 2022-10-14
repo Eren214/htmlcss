@@ -51,6 +51,21 @@
     </div>
     <div id="result3"></div>
 <script>
+    function getLetterCategory(){
+        let letter=document.getElementById("letter_category").value.toLowerCase();
+        switch (letter){
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                document.getElementById("result2").innerHTML="Value is a vowel";
+                break;  
+                default: 
+                document.getElementById("result2").innerHTML="Value is a consonant";
+                break;
+        }
+    }
     function calculator() {
         let x = document.getElementById('fnum').value;
         let y = document.getElementById('snum').value;
