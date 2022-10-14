@@ -50,11 +50,11 @@
         <tbody class="content">
         <tr>
             <td><textarea name="item_1" id="item1" cols="30" rows="1.5" maxlength=""></textarea></td>
-            <td><input type="number" name="quantity_1" id="qty1" onkeyup="keyupFunction()">
+            <td><input type="number" name="quantity_1" id="qty1" onchange="getQuantity1" >
             </td>
-            <td><input type="number" name="unit_1" id="unit1"onkeydown="keydownFunction()">
+            <td><input type="number" name="unit_1" id="unit1" onchange="getQuantity1" >
             </td>
-            <td><input type="number" name="amount_1" id="amount1" readonly></td>
+            <td><input type="number" name="amount_1" id="amt1" onclick="getTotalItem1" ></td>
             
         </tr>
         <tr>
@@ -129,16 +129,20 @@
     </div>
     </div>
 </form>
-
     <script>
-			function keydownFunction() {
-				document.getElementById("qty1").style.backgroundColor = "blue";
-			}
-
-			function keyupFunction() {
-				document.getElementById("unit1").style.backgroundColor = "green";
-			}
-	</script>
+		function getQuantity1(){
+            let x=parseInt(document.getElementById("qty1").value);
+            let y=parseInt(document.getElementById("unit1").value);
+            switch (operation){
+            case "multiplication":
+            var result=x*y;
+            document.getElementById("amt1").setAttribute='value','result';
+            break;
+        }
+    }
+    function getTotalItem1{
+        operation= "multiplication";
+    }
     </script>
 </body>
 </html>
