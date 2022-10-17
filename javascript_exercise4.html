@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Conditions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>   
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/kodego.js"></script>
+    </head>
+<body>
+        <h3>FOR LOOP</h3>
+        <div id="result"></div>
+        <div id="result0"></div>
+        <div id="result1"></div>
+        <div id="result2"></div>
+        <div id="result3"></div>
+        <div id="result4"></div>
+        <div id="result5"></div>
+        
+    <script>
+            let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+            function countConsecutiveValue(list, consecutive=2){
+                let prevNumber = 0;
+                let totalConsecutive = 0;
+                let sequence = 0;
+                for(let i=0; i< list.length; i++){
+                    if(prevNumber == list[i]){
+                        sequence++;
+                    }else{
+                        sequence = 0;
+                    }
+
+                    if(sequence == (consecutive - 1)){
+                        totalConsecutive++;
+                                    sequence = 0;
+                        prevNumber = 0;
+                    }else{
+                        prevNumber = list[i];   
+                    }
+                }
+
+                return totalConsecutive;
+            }
+            document.getElementById("result").innerHTML +="4 consecutive numbers"+countConsecutiveValue(numbers, 4);
+            document.getElementById("result0").innerHTML +="3 consecutive numbers"+countConsecutiveValue(numbers, 3);
+            console.log(countConsecutiveValue(numbers));
+            console.log(countConsecutiveValue(numbers, 3));
+            console.log("4 consecutive" + countConsecutiveValue(numbers, 4));
+            let staff = [
+                {
+                firstName:"Juan",
+                lastName:"Dela Cruz",
+                age: 24,
+                gender: "male",
+                jobTitle: "Manager",
+                },
+                {
+                firstName:"Anna",
+                lastName:"Salvador",
+                age: 21,
+                gender: "female",
+                jobTitle: "Junior Dev",
+                },
+                {
+                firstName:"Mark",
+                lastName:"Bautista",
+                age: 28,
+                gender: "male",
+                jobTitle: "Senior Fullstack Dev",
+                },
+                {
+                firstName:"Michael",
+                lastName:"Garcia",
+                age: 31,
+                gender: "male",
+                jobTitle: "CEO",
+                },
+            ];
+             //find on staff list the oldest and youngest 
+             let oldest=0;
+             let youngest=0;
+             let idx=0;
+             //let idx2=0;
+             staff.forEach(function(data,index,array){
+                if(index==0){
+                    oldest=data.age;
+                    youngest=data.age;
+                }
+                if(oldest<data.age){
+                    oldest=data.age;
+                    idx=index;
+                }
+                if(youngest>data.age){
+                    youngest=data.age;
+                    idx2=index;
+                }
+             }
+             );
+             document.getElementById("result2").innerHTML +="Oldest is"+"  "+staff[idx].firstName+"  with"+"  "+"age:"+ oldest;
+             document.getElementById("result3").innerHTML +="Youngest is"+"  "+staff[idx2].firstName+"  with"+"  "+"age:"+ youngest;
+             
+            //get the lowest and highest number
+            let setOfNumber=[23,34,56,34,5,8,11,43]
+            let highest=0;
+            let lowest=0;
+            setOfNumber.forEach(function(value,index,array){
+                if(index==0){
+                    highest=value;
+                    lowest=value;
+                }
+                if(highest<value){
+                    highest=value;
+                }
+                if(lowest>value){
+                    lowest=value;
+                }
+            }
+            );
+            document.getElementById("result4").innerHTML +=highest+" is the highest";
+            document.getElementById("result5").innerHTML +=lowest +" is the lowest";
+    </script>
+</body>
+</html>
