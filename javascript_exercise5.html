@@ -23,6 +23,7 @@
         <div id="result"></div>
         <div id="result1"></div>
         <script>
+            //Create a function that accepts a number and output the next number in sequence that is divisible by 7.
             function nextNumber(number){
                 for (number;number<=number+7;number++){
                     if(number%7==0){
@@ -33,6 +34,7 @@
             function onkeyuphandler(e){
                 document.getElementById('result').innerHTML=nextNumber(e.currentTarget.value);
             }
+            //Given the data below, display each item details in an invoice table with the following header title:
             let invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
                 {description: "Keyboard", Qty: 3, unitPrice: 400},
                 {description: "Monitor", Qty: 6, unitPrice: 5400},
