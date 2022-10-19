@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <html>
     <head>
         <title>JavaScript Conditions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,6 +18,8 @@
         <div id="result"></div>
         <p id="result1"></p>
 
+        <h3>Fibonacci Sequence</h3>
+        <div id="result2"></div>
 
         <script>
 
@@ -59,34 +60,10 @@
             }
 
             let personalInfo = [
-                {
-                firstName:"Juan",
-                lastName:"Dela Cruz",
-                age: 24,
-                gender: "male",
-                jobTitle: "Manager",
-                },
-                {
-                firstName:"Anna",
-                lastName:"Salvador",
-                age: 21,
-                gender: "female",
-                jobTitle: "Junior Dev",
-                },
-                {
-                firstName:"Mark",
-                lastName:"Bautista",
-                age: 28,
-                gender: "male",
-                jobTitle: "Senior Fullstack Dev",
-                },
-                {
-                firstName:"Micheal",
-                lastName:"Garcia",
-                age: 31,
-                gender: "male",
-                jobTitle: "CEO",
-                },
+                {firstName:"Juan", lastName:"Dela Cruz", age: 24,gender: "male", jobTitle: "Manager"},
+                {firstName:"Anna", lastName:"Salvador", age: 21, gender: "female", jobTitle: "Junior Dev"},
+                {firstName:"Mark", lastName:"Bautista", age: 28, gender: "male", jobTitle: "Senior Fullstack Dev"},
+                {firstName:"Micheal", lastName:"Garcia", age: 31, gender: "male", jobTitle: "CEO"},
             ];
 
             let genderCount = 0;
@@ -99,9 +76,68 @@
 
                 counter++;
             }
-            document.getElementById("result").innerHTML += counter;
+
+            console.log(genderCount);
+
+            let staff = [{name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]}, 
+                {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]}, 
+                {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]}, 
+                {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+                {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+                {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+                {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+                {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+                {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}];
             
-                 let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+
+            let femaleCount = getStaffCount('gender', 'female');
+            let ceoCount = getStaffCount('title', 'CEO');
+
+            console.log(femaleCount);
+            console.log(ceoCount);
+            console.log("age equal to 25: " + getStaffCount('age', 25));
+            console.log("age less than 30: " + getStaffCount('age', 30, "<"));
+            console.log("age greater than 30: " + getStaffCount('age', 30, ">"));
+            console.log("age greater than equal 27: " + getStaffCount('age', 27, ">="));
+            console.log("age less than equal 27: " + getStaffCount('age', 27, "<="));
+            console.log(getStaffCount('language', 'spanish'));
+            console.log(getStaffCount('language', 'english'));
+            console.log(getStaffCount('language', 'french'));
+            console.log(getStaffCount('language', 'russian'));
+
+            console.log("FOR age equal to 25: " + getStaffCountFor('age', 25));
+            console.log("FOR age less than 30: " + getStaffCountFor('age', 30, "<"));
+            console.log("FOR age greater than 30: " + getStaffCountFor('age', 30, ">"));
+            console.log("FOR age greater than equal 27: " + getStaffCountFor('age', 27, ">="));
+            console.log("FOR age less than equal 27: " + getStaffCountFor('age', 27, "<="));
+            console.log(getStaffCountFor('language', 'spanish'));
+            console.log(getStaffCountFor('language', 'english'));
+            console.log(getStaffCountFor('language', 'french'));
+            console.log(getStaffCountFor('language', 'russian'));
+
+            let dataCount = 0;
+            for(let i=0; i < staff.length; i++){
+                if(staff[i].age > 24){
+                    dataCount++;
+                }
+            }
+
+            for(let i=0; i <= 10; i++){
+                console.log("counting >> " + i);
+            }
+
+            let i=0;
+            while(i <=10){
+                console.log("while count >>" + i);
+                i++;
+            }
+
+            console.log(dataCount);
+
+            document.getElementById("result1").innerHTML += "<br>";
+            incrementCountFor(0, 100, document.getElementById("result1"), 5);
+
+            let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
 
             function countConsecutiveValue(list, consecutive=2){
                 let prevNumber = 0;
@@ -126,7 +162,11 @@
                 return totalConsecutive;
             }
 
-                 
+            console.log(countConsecutiveValue(numbers));
+            console.log(countConsecutiveValue(numbers, 3));
+            console.log("4 consecutive" + countConsecutiveValue(numbers, 4));
+
+           
             document.getElementById("result2").innerHTML = doFibonacciSequence(6);
             document.getElementById("result2").innerHTML += "<br/>";
             document.getElementById("result2").innerHTML += doFibonacciSequence(10);
@@ -196,6 +236,21 @@
             });
 
             document.getElementById("result2").innerHTML += setOfNumber[0] + " is the highest number";
+
+
+            function getNextDivisibleNumber(number){
+                for(let i = number; i <= number + 7; i++){
+                    if(i % 7 == 0){
+                        return i;
+                    }
+                }
+
+                for(number; number <= number + 7; number++){
+                    if(number % 7 == 0){
+                        return number;
+                    }
+                }
+            }
 
 
         </script>
